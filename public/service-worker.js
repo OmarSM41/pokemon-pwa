@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-restricted-globals */
-const CACHE_NAME = 'pokemon-pwa-cache-v2';
+const CACHE_NAME = 'pokemon-pwa-cache-v10';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -56,7 +56,6 @@ self.addEventListener('activate', event => {
   );
 });
 
-// ===== NUEVO CÓDIGO PARA NOTIFICACIONES =====
 
 // Manejar mensajes desde la app para mostrar notificaciones
 self.addEventListener('message', (event) => {
