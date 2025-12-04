@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
 const CACHE_NAME = 'pokemon-pwa-cache-v2';
 const urlsToCache = [
   '/',
