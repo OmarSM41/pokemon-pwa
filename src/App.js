@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useNotifications } from './hooks/useNotifications';
 import './App.css';
@@ -12,7 +13,7 @@ function App() {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
   const [favorites, setFavorites] = useState([]);
   const pokemonsPerPage = 30;
-  //const totalPokemons = 1302;
+  const totalPokemons = 1302;
 
   // Hook de notificaciones
   const { solicitarPermisoNotificaciones, enviarNotificacion } = useNotifications();
@@ -27,7 +28,7 @@ function App() {
         }
       }, 2000);
     }
-  }, );
+  }, []);
 
   useEffect(() => {
     filterPokemons();
