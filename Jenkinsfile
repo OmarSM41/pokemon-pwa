@@ -5,21 +5,15 @@ pipeline {
         VERCEL_TOKEN = credentials('VERCEL_TOKEN')
     }
 
+    tools {
+        nodejs 'node18'
+    }
+
     stages {
         stage('Checkout') {
             steps {
                 git branch: 'master',
                     url: 'https://github.com/OmarSM41/pokemon-pwa-probando.git'
-            }
-        }
-
-        stage('Install Node') {
-            steps {
-                bat '''
-                    echo Instalando Node 18...
-                    curl -o node.msi https://nodejs.org/dist/v18.19.0/node-v18.19.0-x64.msi
-                    msiexec /i node.msi /quiet /norestart
-                '''
             }
         }
 
